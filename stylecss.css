@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script');
+
+/* can be added to body or a section/div/button/wherever a background image can be applied */
+body {
+	background: linear-gradient(rgba(253, 29, 29, 0.5), rgba(210, 71, 90, 0.5)), url("img/admin.jfif") center center no-repeat;
+  
+/*  below values are optional */
+ 	background-attachment:fixed;
+	background-size: cover;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  font-family: 'Petit Formal Script', cursive;
+	  font-size: 70px;
+	  text-align: center;
+	  color: white;
+	  text-shadow: 0 0 2px black;
+}
