@@ -1,27 +1,6 @@
 <?php
-session_start();
-error_reporting(0);
-include('includes/dbconnection.php');
-if (strlen($_SESSION['aid']==0)) {
-  header('location:logout.php');
-  } else{
-
-if(isset($_POST['submit']))
-  {
-    $coursename=$_POST['coursename'];
-     
-    $query=mysqli_query($con, "insert into  tblcourse(CourseName) value('$coursename')");
-    if ($query) {
-    $msg="Course has been added.";
-  }
-  else
-    {
-      $msg="Something Went Wrong. Please try again";
-    }
-
-  
-}
-  ?>
+include_once('user/includes/dbconnection.php');
+?>
   <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <head>
@@ -126,9 +105,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">Search Applications</h4>
- <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
-        else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
-                  <div class="heading-elements">
+                   <div class="heading-elements">
                     <ul class="list-inline mb-0">
                   
                       <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
@@ -261,4 +238,3 @@ $cnt=$cnt+1;
 
 </body>
 </html>
-<?php }  ?>

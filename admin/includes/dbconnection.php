@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost", "root", "", "fcapt_pt");
+$con=mysqli_connect("localhost", "root", "", "admission");
 if(mysqli_connect_errno()){
 echo "Connection Fail".mysqli_connect_error();
 }
